@@ -21,4 +21,8 @@ class Controller extends BaseController
             "conteudo" => $request->conteudo], 201)
         );
     }
+
+    public function welcome(){
+        return response("Hello World, Heroku !!", 200);
+    }
 }
