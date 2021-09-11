@@ -15,6 +15,10 @@ class Controller extends BaseController
         return Posts::all();
     }
 
+    public function show($id){
+        return Posts::find($id);
+    }
+
     public function store(Request $request){
         return response()->json(Posts::create([
             "titulo" => $request->titulo,
