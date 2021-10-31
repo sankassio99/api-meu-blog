@@ -20,6 +20,9 @@ $router->group(['prefix' => '/api'], function () use ($router) {
     $router->get('/', 'Controller@welcome');
     $router->get('/posts/{id}', 'Controller@show');
     $router->get('/posts', 'Controller@index');
+    $router->delete('/posts/{id}', 'Controller@destroy');
+    $router->put('/posts/{id}', 'Controller@update');
+    $router->post('/posts', 'Controller@store');
 });
 
 $router->post('/api/login', 'TokenController@gerarToken');
